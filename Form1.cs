@@ -33,7 +33,9 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            cancelpop openform = new cancelpop();
+            openform.Show();
+            Hide();
         }
     }
 }
