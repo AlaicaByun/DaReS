@@ -181,6 +181,7 @@
             this.delete_id.Name = "delete_id";
             this.delete_id.Size = new System.Drawing.Size(65, 20);
             this.delete_id.TabIndex = 54;
+            this.delete_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.delete_id_KeyPress);
             // 
             // label1
             // 
@@ -215,7 +216,7 @@
             this.id_box.Name = "id_box";
             this.id_box.Size = new System.Drawing.Size(65, 20);
             this.id_box.TabIndex = 51;
-            this.id_box.TextChanged += new System.EventHandler(this.id_box_TextChanged);
+            this.id_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_box_KeyPress);
             // 
             // label13
             // 
@@ -235,6 +236,7 @@
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(207, 20);
             this.number.TabIndex = 49;
+            this.number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label7
             // 

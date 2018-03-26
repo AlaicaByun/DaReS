@@ -59,7 +59,7 @@ namespace DARES1
                 OleDbDataAdapter da = new OleDbDataAdapter(command);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-               dataGridView1.DataSource = dt;
+                dataGridView1.DataSource = dt;
 
 
                 connect.Close();
@@ -77,9 +77,9 @@ namespace DARES1
                 connect.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connect;
-                string query = "update client set Name='"+ text_name.Text + "' ,Address= '"+ addressbox.Text + "' ,Contact_num= '" + number.Text + "' ,Eventtype= '" + text_event.Text + "' ,notes= '" + text_note.Text + "' ,Sched= '" + datepick.Text + "' where ID="+id_box.Text+"";
+                string query = "update client set Name='" + text_name.Text + "' ,Address= '" + addressbox.Text + "' ,Contact_num= '" + number.Text + "' ,Eventtype= '" + text_event.Text + "' ,notes= '" + text_note.Text + "' ,Sched= '" + datepick.Text + "' where ID=" + id_box.Text + "";
                 command.CommandText = query;
-                MessageBox.Show(query);
+               // MessageBox.Show(query);
                 command.ExecuteNonQuery();
                 EditSave save = new EditSave();
                 save.Show();
@@ -106,11 +106,11 @@ namespace DARES1
                 command.Connection = connect;
                 string query = "update client set reserved='No' where ID=" + delete_id.Text + "";
                 command.CommandText = query;
-                MessageBox.Show(query);
+               // MessageBox.Show(query);
                 command.ExecuteNonQuery();
-               delete save = new delete();
+                delete save = new delete();
                 save.Show();
-             
+
                 connect.Close();
             }
             catch (Exception ex)
@@ -119,21 +119,42 @@ namespace DARES1
             }
         }
 
-        private void id_box_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            Form2 even = new Form2();
+            Calendar even = new Calendar();
             even.Show();
             this.Hide();
         }
 
+        private void number_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void id_box_KeyPress(object sender, KeyPressEventArgs ep)
+        {
+            char hu = ep.KeyChar;
+            if (!Char.IsDigit(hu) && hu != 8 && hu != 46)
+            {
+                ep.Handled = true;
+            }
+        }
+
+        private void delete_id_KeyPress(object sender, KeyPressEventArgs el)
+        {
+            char hu = el.KeyChar;
+            if (!Char.IsDigit(hu) && hu != 8 && hu != 46)
+            {
+                el.Handled = true;
+            }
         }
 
 
     }
-
-
+}

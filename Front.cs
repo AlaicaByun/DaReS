@@ -40,6 +40,38 @@ namespace DARES1
             even.Show();
             this.Hide();
         }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            Calendar cal = new Calendar();
+            cal.Show();
+            this.Hide();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
+
+        private void home_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
    
 
 

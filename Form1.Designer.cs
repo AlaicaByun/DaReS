@@ -185,7 +185,7 @@ namespace DARES1
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(253, 20);
             this.number.TabIndex = 61;
-            this.number.TextChanged += new System.EventHandler(this.number_TextChanged);
+            this.number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label7
             // 

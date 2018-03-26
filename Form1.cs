@@ -109,10 +109,18 @@ namespace DARES1
             }
         }
 
-        private void number_TextChanged(object sender, EventArgs e)
+        private void number_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch !=8 && ch !=46)
+            {
+                e.Handled = true;
+            }
         }
+
+ 
+
+      
 
        
 
