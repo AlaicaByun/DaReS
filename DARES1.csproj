@@ -102,6 +102,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
       <Link>Form1.resx</Link>
     </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="delete.resx">
       <DependentUpon>delete.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +148,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dawn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="daawn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cabsi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="soni.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Untitled-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="krizzy.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
